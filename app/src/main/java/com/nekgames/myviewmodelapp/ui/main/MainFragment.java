@@ -1,5 +1,7 @@
 package com.nekgames.myviewmodelapp.ui.main;
 
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -13,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nekgames.myviewmodelapp.R;
+
+import java.util.List;
+import java.util.Objects;
 
 public class MainFragment extends Fragment {
 
@@ -32,8 +37,13 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        mViewModel.getPosts().observe(Objects.requireNonNull(getActivity()), new Observer<List<UrlPost>>() {
+            @Override
+            public void onChanged(List<UrlPost> urlPosts) {
 
+            }
+        });
     }
 
 }
