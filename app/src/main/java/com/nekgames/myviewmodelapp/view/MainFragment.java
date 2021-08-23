@@ -1,8 +1,7 @@
-package com.nekgames.myviewmodelapp.ui.main;
+package com.nekgames.myviewmodelapp.view;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
@@ -17,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nekgames.myviewmodelapp.R;
+import com.nekgames.myviewmodelapp.model.UrlPost;
 
 import java.util.List;
 import java.util.Objects;

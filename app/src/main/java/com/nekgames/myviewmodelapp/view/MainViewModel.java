@@ -1,4 +1,7 @@
-package com.nekgames.myviewmodelapp.ui.main;
+package com.nekgames.myviewmodelapp.view;
+
+import com.nekgames.myviewmodelapp.model.UrlPost;
+import com.nekgames.myviewmodelapp.network.NetworkClient;
 
 import java.util.ArrayList;
 import java.util.List;

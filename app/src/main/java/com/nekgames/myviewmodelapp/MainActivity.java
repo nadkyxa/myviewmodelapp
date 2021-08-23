@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.nekgames.myviewmodelapp.ui.main.MainFragment;
+import com.nekgames.myviewmodelapp.view.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

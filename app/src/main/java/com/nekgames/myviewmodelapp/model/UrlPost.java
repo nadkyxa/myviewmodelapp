@@ -1,4 +1,4 @@
-package com.nekgames.myviewmodelapp.ui.main;
+package com.nekgames.myviewmodelapp.model;
 
 import com.google.gson.annotations.SerializedName;
 

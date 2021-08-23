@@ -1,4 +1,4 @@
-package com.nekgames.myviewmodelapp.ui.main;
+package com.nekgames.myviewmodelapp.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nekgames.myviewmodelapp.R;
+import com.nekgames.myviewmodelapp.model.UrlPost;
 
 import java.util.List;
 
@@ -17,12 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
  **/
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
-    private List<UrlPost> mData;
+    private List<UrlPost> posts;
     private LayoutInflater mInflater;
 
     PostAdapter(Context context, List<UrlPost> data) {
         this.mInflater = LayoutInflater.from(context);
-        this.mData = data;
+        this.posts = data;
     }
 
     @Override
@@ -33,13 +34,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String postTitle = mData.get(position).getTitle();
+        String postTitle = posts.get(position).getTitle();
         holder.titleTextView.setText(postTitle);
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return posts.size();
     }
 
 

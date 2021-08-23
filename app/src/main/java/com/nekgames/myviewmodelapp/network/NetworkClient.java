@@ -1,4 +1,4 @@
-package com.nekgames.myviewmodelapp.ui.main;
+package com.nekgames.myviewmodelapp.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
