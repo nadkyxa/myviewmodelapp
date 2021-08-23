@@ -9,6 +9,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +43,11 @@ public class MainFragment extends Fragment {
         mViewModel.getPosts().observe(Objects.requireNonNull(getActivity()), new Observer<List<UrlPost>>() {
             @Override
             public void onChanged(List<UrlPost> urlPosts) {
-
+                RecyclerView recyclerView = getActivity().findViewById(R.id.postsRecyclerView);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                PostAdapter adapter = new PostAdapter(getContext(), urlPosts);
+                //adapter.setClickListener(getActivity());
+                recyclerView.setAdapter(adapter);
             }
         });
     }
